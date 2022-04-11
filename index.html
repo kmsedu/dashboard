@@ -5,11 +5,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./scripts/scripts.js" defer></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./styles/reset.css">   
     <link rel="stylesheet" href="./styles/style.css">
     <title>Dashboard</title>
 </head>
 <body>
-    <h1>Dashboard</h1>
+    <main id="main-window">
+        <section id="sidebar">
+            <div id="logo">
+                <span class="material-icons" id="logo-icon">space_dashboard</span>
+                <h1 id="title">Dashboard</h1>
+            </div>
+            <nav id="nav-section1" class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="material-icons sidebar-nav-icon">home</span>
+                            <span id="home-link">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="material-icons sidebar-nav-icon">assignment</span>
+                            <span id="tasks-link">Tasks</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="material-icons sidebar-nav-icon">message</span>
+                            <span id="messages-link">Messages</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="material-icons sidebar-nav-icon">contacts</span>
+                            <span id="contacts-link">Contacts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="material-icons sidebar-nav-icon">calendar_month</span>
+                            <span id="calendar-link">Calendar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="material-icons sidebar-nav-icon">person</span>
+                            <span id="profile-link">Profile</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <nav id="nav-section2" class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="material-icons sidebar-nav-icon">settings</span>
+                            <span id="settings-link">Settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="material-icons sidebar-nav-icon">security</span>
+                            <span id="privacy-link">Privacy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="material-icons sidebar-nav-icon">help</span>
+                            <span id="help-and-support-link">Help & Support</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <section id="content">
+            <header id="content-header"></header>
+            <section id="content-main"></section>
+        </section>
+    </main>
 </body>
 </html>

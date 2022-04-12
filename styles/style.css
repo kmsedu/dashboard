@@ -1,8 +1,8 @@
 html, * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-
-
 
 button, input {
     border: none;
@@ -12,6 +12,7 @@ button, input {
     height: 100vh;
     display: grid;
     grid-template-columns: 250px 1fr;
+    overflow: auto;
 }
 
 #sidebar {
@@ -175,7 +176,6 @@ button, input {
 }
 
 #content-wrapper {
-    height: 100%;
     display: grid;
     grid-template-columns: 4fr 1fr;
     grid-template-rows: 1fr 1fr;

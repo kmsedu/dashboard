@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./scripts/scripts.js" defer></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="./styles/reset.css">   
     <link rel="stylesheet" href="./styles/style.css">
     <title>Dashboard</title>
@@ -13,10 +13,12 @@
 <body>
     <main id="main-window">
         <section id="sidebar">
+
             <div id="logo">
                 <span class="material-icons" id="logo-icon">space_dashboard</span>
                 <h1 id="title">Dashboard</h1>
             </div>
+
             <nav id="nav-section1" class="sidebar-nav">
                 <ul>
                     <li>
@@ -57,6 +59,7 @@
                     </li>
                 </ul>
             </nav>
+
             <nav id="nav-section2" class="sidebar-nav">
                 <ul>
                     <li>
@@ -80,8 +83,38 @@
                 </ul>
             </nav>
         </section>
+
         <section id="content">
-            <header id="content-header"></header>
+            <div id="content-header-wrapper">
+                    
+                <div id="search-wrapper">
+                    <span class="material-icons search-icon">search</span>
+                    <form action="#" method="post" id="search-form">
+                        <input type="search" name="searchbar" id="searchbar" placeholder="Search">
+                    </form>
+                </div>
+
+                <div id="user-wrapper">
+                    <span class="material-icons-outlined notification-icon">notifications</span>
+                    <img src="./images/profile-pic.png" alt="Your profile picture" class="profile-pic-small">
+                    <p id="username-display-small">John Doe</p>
+                </div>
+
+                <div id="welcome-wrapper">
+                    <img src="./images/profile-pic.png" alt="Your profile picture" class="profile-pic-large">
+                    <div id="greeting">
+                        <p id="greeting-text">Welcome back,</p>
+                        <p id="username-display-large">John Doe (@john)</p>
+                    </div>
+                </div>
+
+                <div id="header-tool-wrapper">
+                    <button type="button">New</button>
+                    <button type="button">Upload</button>
+                    <button type="button">Share</button>
+                </div>
+
+            </div>
             <section id="content-main"></section>
         </section>
     </main>

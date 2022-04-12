@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+button, input {
+    border: none;
+}
+
 #main-window {
     height: 100vh;
     width: 100vw;
@@ -12,7 +16,7 @@
 #sidebar {
     background: yellow;
     display: grid;
-    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
 }
 
 #logo {
@@ -23,7 +27,7 @@
 }
 
 #logo-icon {
-    font-size: 3rem;
+    font-size: 48px;
     justify-self: end;
 }
 
@@ -34,7 +38,7 @@
 
 .sidebar-nav-icon {
     justify-self: end;
-    padding-right: 12px;
+    font-size: 24px;
 }
 
 .sidebar-nav a {
@@ -54,11 +58,96 @@
 #content {
     background: green;
     display: grid;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: min-content 1fr;
+    align-content: center;
 }
 
-#content-header {
-    background: pink;
+#content-header-wrapper {
+    max-height: fit-content(100%);
+    display: grid;
+    grid-template: 1fr 1fr / 60% 1fr;
+    align-items: center;
+    padding: 1rem 6rem 1rem 3rem;
+    margin: 0;
+}
+
+#search-wrapper {  
+    display: flex;
+    gap: 1rem;
+}
+
+#search-form {
+    flex: 1;
+    display: flex;
+}
+
+#searchbar {
+    flex: 1;
+    padding: 0.5rem;
+    align-self: center;
+    border-radius: 15px;
+}
+
+.search-icon {
+    justify-self: end;
+    align-self: center;
+}
+
+#user-wrapper {
+    display: grid;
+    justify-self: end;
+    grid-template-columns: 1fr 1fr 2fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+#username-display-small {
+    font-size: 1.4rem;
+}
+
+.notification-icon {
+    font-size: 24px;
+    justify-self: end;
+}
+
+.profile-pic-small {
+    width: auto;
+    max-height: 48px;
+    border-radius: 100%;
+}
+
+#welcome-wrapper {
+    display: grid;
+    grid-template-columns: fit-content(100%) 1fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+#greeting-text {
+    font-weight: 700;
+}
+
+#username-display-large {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.profile-pic-large {
+    width: auto;
+    max-height: 72px;
+    border-radius: 100%;
+}
+
+#header-tool-wrapper {
+    justify-self: end;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#header-tool-wrapper button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
 }
 
 #content-main {

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
 
 html {
     box-sizing: border-box;
@@ -11,8 +11,31 @@ html {
     font-size: 12px;
 }
 
+:root {
+    --main-color: #064e3b;
+    --secondary-color: #6366f1;
+    --color-gray: #e4e4e7;  
+}
+
 button, input {
     border: none;
+}
+
+#sidebar, button {
+    background: var(--main-color);
+}
+
+.search-icon {
+    color: var(--secondary-color);
+}
+
+.card, #announcements-card, #trending-card, #content-header-wrapper {
+    background: white;
+    box-shadow: 0.05rem 0.1rem 3px hsla(0, 0%, 0%, 0.068);
+}
+
+.separator {
+    background-color: rgba(0, 0, 0, 0.445);
 }
 
 #main-window {
@@ -25,7 +48,6 @@ button, input {
 #sidebar {
     display: grid;
     grid-template-rows: 1fr 4fr 2fr;
-    background: rgb(197, 80, 80);
     color: white;
 }
 
@@ -36,6 +58,7 @@ button, input {
     grid-template-columns: 1fr 3fr;
     gap: 1rem;
     place-items: end;
+    font-weight: bold;
 }
 
 #logo-icon {
@@ -60,7 +83,8 @@ button, input {
     display: grid;
     align-items: flex-end;
     grid-template-columns: 1fr 3.5fr;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    font-weight: 600;
     gap: 2rem;
     padding: 0.75rem 0;
     color: white;
@@ -82,7 +106,7 @@ button, input {
 #content {
     display: grid;
     grid-template-rows: min-content 5fr;
-    background: lightslategray;
+    background: var(--color-gray);
     height: 100%;
 }
 
@@ -92,7 +116,6 @@ button, input {
     align-items: center;
     padding: 0 6rem 0 3rem;
     margin: 0;
-    background: white;
 }
 
 #search-wrapper { 
@@ -108,10 +131,17 @@ button, input {
 }
 
 #searchbar {
+    font-size: 1.2rem;
     flex: 1;
-    padding: 0.5rem;
+    padding: 0.75rem 1rem;
     align-self: center;
     border-radius: 15px;
+    border: 1px solid var(--color-gray);
+}
+
+#searchbar:focus {
+    outline: none;
+    border: 2px solid var(--secondary-color);
 }
 
 .search-icon {
@@ -123,7 +153,8 @@ button, input {
     padding-top: 1rem;
     display: grid;
     justify-self: end;
-    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-items: center;
     align-items: center;
     gap: 2rem;
 }
@@ -131,11 +162,17 @@ button, input {
 #username-display-small {
     font-size: 1.4rem;
     font-weight: 700;
+    grid-column: 2;
+    grid-row: 1;
 }
 
 .notification-icon {
     font-size: 24px;
     justify-self: end;
+}
+
+#user-wrapper > .profile-pic-small {
+    grid-column: 3;
 }
 
 .profile-pic-small {
@@ -184,13 +221,20 @@ button, input {
 #header-tool-wrapper {
     justify-self: end;
     display: grid;
-    gap: 2rem;
+    gap: 3rem;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
 #header-tool-wrapper button {
-    padding: 0.75rem 1.5rem;
+    padding: 1rem 2rem;
     border-radius: 50px;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+#header-tool-wrapper :first-child {
+    background: var(--secondary-color);
 }
 
 #content-wrapper {
@@ -210,8 +254,9 @@ button, input {
 }
 
 #content-main h2 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     padding-bottom: 1rem;
+    font-weight: 600;
 }
 
 #card-wrapper {
@@ -224,16 +269,16 @@ button, input {
 }
 
 .card {
+    padding-top: 2rem;
     display: grid;
     grid-template-rows: 3rem min-content 1fr;
     justify-content: start;
     border-radius: 8px;
     align-items: center;
-    background: grey;
 }
 
 .card-title {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 700;
     padding-left: 4rem;
     align-self: end;
@@ -246,6 +291,7 @@ button, input {
     padding-top: 5px;
     margin-bottom: 15px;
     padding-left: 4rem;
+    opacity: 60%;
 }
 
 .card-icon-container {
@@ -255,6 +301,11 @@ button, input {
     gap: 1rem;
     margin-bottom: 15px;
     padding-right: 15px;
+    color: rgba(0, 0, 0, 0.541);
+}
+
+.card-icon-container :first-child {
+    color: var(--secondary-color);
 }
 
 #announcements {
@@ -270,7 +321,6 @@ button, input {
     grid-template-rows: 1fr 3px 1fr 3px 1fr;
     padding: 1rem 3rem;
     border-radius: 8px;
-    background: grey;
     min-height: 85%;
 }
 
@@ -284,10 +334,13 @@ button, input {
     padding: 10px 0;
 }
 
+.announcement-content {
+    opacity: 60%;
+}
+
 .separator {
     height: 1px;
     opacity: 35%;
-    background: white;
 }
 
 #trending {
@@ -303,7 +356,6 @@ button, input {
     padding: 1.5rem;
     row-gap: 2rem;
     border-radius: 8px;
-    background: grey;
 }
 
 .trending-entry {
@@ -321,11 +373,16 @@ button, input {
     grid-area: handle;
     justify-self:start;
     align-self: flex-end;
+    font-weight: bold;
+    opacity: 100%;
+    font-size: 1.1rem;
 }
 
 .trending-title {
     grid-area: title;
-    justify-self:start;
+    justify-self: start;
+    opacity: 60%;
+    font-size: 1rem;
 }
 
 .trending-entry > .profile-pic-small {
